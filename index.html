@@ -1,69 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio.css">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Anamol Shrestha</title>
+  <link rel="stylesheet" href="portfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <nav>
-        <div>
-            <a href="#"><img src="data:image/jpeg;base64,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AREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERB//9k=" alt="Logo"></a>
+
+  <!-- ───────── CURSOR ───────── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ───────── NAV ───────── -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">NP<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ───────── HERO ───────── -->
+  <section class="hero" id="hero">
+    <div class="hero-noise"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">  
+      <h1 class="hero-title reveal">
+        <span>I am</span>
+        <em>Anamol Shrestha</em>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Designer &amp; Developer crafting<br />
+        purposeful digital experiences.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#work" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span></span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <div class="hero-tag">
+      <span>Based in Kathmandu, Nepal</span>
+    </div>
+  </section>
+
+  <!-- ───────── MARQUEE ───────── -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>UI/UX Design</span><span class="sep">✦</span>
+      <span>Frontend Dev</span><span class="sep">✦</span>
+      <span>Branding</span><span class="sep">✦</span>
+      <span>Motion</span><span class="sep">✦</span>
+      <span>Creative Direction</span><span class="sep">✦</span>
+      <span>Web Apps</span><span class="sep">✦</span>
+      <span>UI/UX Design</span><span class="sep">✦</span>
+      <span>Frontend Dev</span><span class="sep">✦</span>
+      <span>Branding</span><span class="sep">✦</span>
+      <span>Motion</span><span class="sep">✦</span>
+      <span>Creative Direction</span><span class="sep">✦</span>
+      <span>Web Apps</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ───────── ABOUT ───────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="label reveal">About Me</p>
+          <h2 class="section-title reveal">
+            A craftsman obsessed with the intersection of <em>form</em> and function.
+          </h2>
         </div>
-        <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="" class="download"><i class=""></i>Download CV</a></li>
-
-
-        </ul>
-    </nav>
-    <!---->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1></h1>
-            <p></p>
+        <div class="about-right">
+          <div class="about-photo reveal">
+            <div class="photo-placeholder">
+              <span>Anamol Shrestha</span>
+            </div>
+            <div class="photo-frame"></div>
+          </div>
+          <p class="about-text reveal">
+            Hi - I'm <strong>Anamol Shrestha</strong>, A Cyber Security and Ethical Hacking graduate student with a strong passion for ensuring the security and resilience of networks and the digital landscape.
+              With a solid foundation in cybersecurity principles and ethical hacking techniques, I am dedicated to identifying vulnerabilities and implementing robust security measures to protect against cyber threats. I thrive on the challenge of staying one step ahead of malicious actors and am committed to contributing my skills to create a safer online environment.
+          </p>
+          <p class="about-text reveal">
+           My academic journey, combined with my enthusiasm for practical application, drives my commitment to excel in the realm of cybersecurity.
+          </p>
+          <a href="#" class="btn btn-outline reveal">Download CV</a>
         </div>
-    </section>
-    <!--About-->
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <p>I am Anamol Shrestha. I am from Solukhumbu, Nepal.</p>
-        </section>
-    <!--Education-->
-    <section id="education" class="education">
-        <h3>Education</h3>
-        <ul>
-            <li>Bachelors Degree.</li>
-            <li>Web Development Certificate.</li>
-        </ul>    
-    </section>
-    <!--Projects-->
-    <section id="projects" class="projects">
-        <h4>Projects</h4>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-        </ul>
-    </section>
-    <!--Contact Form-->
-    <section id="contact" class="contact">
-        <h5>Contact Me</h5>
-        <form action="">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" cols="10" rows="5"></textarea>
-            <input type="submit" value="Send">
+      </div>
+    </div>
+  </section>
 
-        </form>
-    </section>
+  <!-- ───────── WORK ───────── -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="label">Selected Work</p>
+        <h2 class="section-title">Recent Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 — Featured -->
+        <article class="project project--featured reveal">
+          <a href="#" class="project-link">
+            <div class="project-img">
+              <div class="img-placeholder">
+                <span>Project Screenshot</span>
+              </div>
+              <div class="project-overlay">
+                <span class="view-label">View Project ↗</span>
+              </div>
+            </div>
+          </a>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="tag">Web Design</span>
+              <span class="tag">Branding</span>
+              <span class="year">2025</span>
+            </div>
+            <h3 class="project-title">Project Title One</h3>
+            <p class="project-desc">
+              A brief one-line description of what you built and the impact it had
+              on the client or users.
+            </p>
+            <a href="#" class="project-arrow">View Case Study →</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project reveal">
+          <a href="#" class="project-link">
+            <div class="project-img">
+              <div class="img-placeholder">
+                <span>Project Screenshot</span>
+              </div>
+              <div class="project-overlay">
+                <span class="view-label">View Project ↗</span>
+              </div>
+            </div>
+          </a>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="tag">App Design</span>
+              <span class="year">2025</span>
+            </div>
+            <h3 class="project-title">Project Title Two</h3>
+            <p class="project-desc">Short description of this project.</p>
+            <a href="#" class="project-arrow">View Case Study →</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project reveal">
+          <a href="#" class="project-link">
+            <div class="project-img">
+              <div class="img-placeholder">
+                <span>Project Screenshot</span>
+              </div>
+              <div class="project-overlay">
+                <span class="view-label">View Project ↗</span>
+              </div>
+            </div>
+          </a>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="tag">Development</span>
+              <span class="year">2024</span>
+            </div>
+            <h3 class="project-title">Project Title Three</h3>
+            <p class="project-desc">Short description of this project.</p>
+            <a href="#" class="project-arrow">View Case Study →</a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project reveal">
+          <a href="#" class="project-link">
+            <div class="project-img">
+              <div class="img-placeholder">
+                <span>Project Screenshot</span>
+              </div>
+              <div class="project-overlay">
+                <span class="view-label">View Project ↗</span>
+              </div>
+            </div>
+          </a>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="tag">UI Design</span>
+              <span class="year">2024</span>
+            </div>
+            <h3 class="project-title">Project Title Four</h3>
+            <p class="project-desc">Short description of this project.</p>
+            <a href="#" class="project-arrow">View Case Study →</a>
+          </div>
+        </article>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- ───────── SKILLS ───────── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="label">Expertise</p>
+        <h2 class="section-title">What I Bring</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">✦</div>
+          <h3>Design</h3>
+          <ul>
+            <li>Figma / Sketch</li>
+            <li>UI / UX Design</li>
+            <li>Brand Identity</li>
+            <li>Motion Design</li>
+            <li>Design Systems</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">⬡</div>
+          <h3>Development</h3>
+          <ul>
+            <li>HTML / CSS / JS</li>
+            <li>React / Vue</li>
+            <li>Node.js</li>
+            <li>REST APIs</li>
+            <li>Git &amp; CI/CD</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">◈</div>
+          <h3>Strategy</h3>
+          <ul>
+            <li>User Research</li>
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>A/B Testing</li>
+            <li>Analytics</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">◎</div>
+          <h3>Tools</h3>
+          <ul>
+            <li>VS Code</li>
+            <li>Adobe Suite</li>
+            <li>Notion</li>
+            <li>Framer</li>
+            <li>Webflow</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── EDUCATION ───────── -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="label">Education</p>
+        <h2 class="section-title"> </h2>
+      </div>
+
+      <div class="testi-grid">
+
+        <blockquote class="testi-card reveal">
+          <p>Completed +2 from Xavier International College, Kalopul.</p>
+      
+        </blockquote>
+
+        <blockquote class="testi-card reveal">
+          <p>Completed Bsc (Hons) Ethical Hacking and Cybersecurity from Softwarica College of It & E-Commerce, Dillibazaar.</p>
+          
+        </blockquote>
+
+        <blockquote class="testi-card reveal">
+          <p>Currently pursuing MSc IT with Specialization in Cyber Threat Intelligence in Islington College, Kamalpokhari.</p>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── CONTACT ───────── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <p class="label">Contact</p>
+        <h2 class="contact-title">
+          Wanna have a convo?<br/>
+        </h2>
+        <a href="mailto:hello@yourname.com" class="contact-email">
+          hello@yourname.com
+        </a>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/anamol-shrestha-592421295/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/turtle164" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://x.com/AnamolShresth13" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Anamol Shrestha. All rights reserved.</p>
+      <p>Designed &amp; built by <strong>Anamol Shrestha</strong></p>
+    </div>
+  </footer>
+
+  <!-- ───────── SCRIPTS ───────── -->
+  <script>
+    /* ─── Custom cursor ─── */
+    const cursor = document.getElementById('cursor');
+    const dot    = document.getElementById('cursorDot');
+    document.addEventListener('mousemove', e => {
+      cursor.style.transform = `translate(${e.clientX - 18}px, ${e.clientY - 18}px)`;
+      dot.style.transform    = `translate(${e.clientX - 3}px,  ${e.clientY - 3}px)`;
+    });
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
+    });
+
+    /* ─── Scroll-reveal ─── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer  = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ─── Sticky nav ─── */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    });
+
+    /* ─── Mobile nav toggle ─── */
+    const toggle = document.getElementById('navToggle');
+    toggle.addEventListener('click', () => nav.classList.toggle('nav--open'));
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => nav.classList.remove('nav--open'));
+    });
+
+    /* ─── Smooth scroll for anchor links ─── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
 </body>
 </html>
